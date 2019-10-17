@@ -1,0 +1,13 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/custom_screens.rpy", line 52: is not terminated with a newline. (Check strings and parenthesis.)
+        show screen grid_screen(numbers, 40
+
+File "game/script.rpy", line 27: u'action' is not a keyword argument or valid child for the for statement.
+    action Null
+          ^
+
+Ren'Py Version: Ren'Py 7.0.0.196
+Thu Sep 13 16:06:45 2018

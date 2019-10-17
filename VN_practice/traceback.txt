@@ -1,0 +1,61 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 198, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 442, in script
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 442, in <module>
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 359, in _m1_00gltest__gl_test
+    _gl_performance_test()
+  File "renpy/common/00gltest.rpy", line 384, in _gl_performance_test
+    ui.interact(suppress_underlay=True, suppress_overlay=True)
+IOError: Couldn't find file 'icon.jpg'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/bootstrap.py", line 306, in bootstrap
+    renpy.main.main()
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/main.py", line 513, in main
+    run(restart)
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/main.py", line 139, in run
+    renpy.execution.run_context(True)
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/execution.py", line 879, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 198, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 442, in script
+    $ __gl_test()
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/ast.py", line 862, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/python.py", line 1912, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00gltest.rpy", line 442, in <module>
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 359, in _m1_00gltest__gl_test
+    _gl_performance_test()
+  File "renpy/common/00gltest.rpy", line 384, in _gl_performance_test
+    ui.interact(suppress_underlay=True, suppress_overlay=True)
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/display/core.py", line 2617, in interact
+    self.start()
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/display/core.py", line 1774, in start
+    self.set_mode()
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/display/core.py", line 2007, in set_mode
+    if draw.set_mode(virtual_size, physical_size, fullscreen):
+  File "gldraw.pyx", line 204, in renpy.gl.gldraw.GLDraw.set_mode
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/display/core.py", line 1805, in post_init
+    self.set_icon()
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/display/core.py", line 1836, in set_icon
+    renpy.loader.load(icon),
+  File "/Users/harlanbrawer/Documents/cs/renpy-7.0.0-sdk/renpy/loader.py", line 555, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'icon.jpg'.
+
+Darwin-18.2.0-x86_64-i386-64bit
+Ren'Py 7.0.0.196
+Max the Pear 1.0 Mega Super Beta Alpha
+Wed Oct 16 23:49:54 2019
